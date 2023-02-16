@@ -1,0 +1,15 @@
+version: '3'
+
+volumes:
+  mongo_db2: {}
+services:
+   mongo:
+    image: mongo:4.4.3-bionic
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_db2:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: danny101201
+      MONGO_INITDB_ROOT_PASSWORD: Kjhg2365987
